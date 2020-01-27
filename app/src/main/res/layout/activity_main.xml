@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/Layout_one"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+        <EditText
+            android:id="@+id/num1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="number 1 (maximum 8 bit)"
+            android:inputType="numberSigned"
+            android:maxLength="8"
+            android:outlineAmbientShadowColor="@color/white"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.204" />
+
+        <EditText
+            android:id="@+id/num2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="number 2 (maximum 8 bit)"
+            android:inputType="numberSigned"
+            android:maxLength="8"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/num1"
+            app:layout_constraintVertical_bias="0.113" />
+
+        <Spinner
+            android:id="@+id/operator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/num2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/num1"
+            app:layout_constraintVertical_bias="0.545" />
+
+        <Button
+            android:id="@+id/equals"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:text="="
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/num2"
+            app:layout_constraintVertical_bias="0.136" />
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:freezesText="true"
+            android:scrollbars="vertical"
+            android:text="Result"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/equals"
+            app:layout_constraintVertical_bias="0.145" />
+
+        <Button
+            android:id="@+id/home"
+            android:layout_width="70dp"
+            android:layout_height="64dp"
+            android:background="@drawable/home"
+            android:shadowColor="@color/white"
+            android:text="Button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="reset"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.95"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.023" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Binary Calculator"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/num1"
+            app:layout_constraintEnd_toStartOf="@+id/reset"
+            app:layout_constraintStart_toEndOf="@+id/home"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.566" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
